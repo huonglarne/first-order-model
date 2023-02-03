@@ -1,0 +1,78 @@
+(/nas/huong/env/fom) ubuntu@moreh-test-vm12:/nas/huong/projects/first-order-model$  python demo.py  --config config/vox-256.yaml --driving_video crop.mp4 --source_image img.jpg --che
+ckpoint ckpt/vox-cpk.pth.tar --relative --adapt_scale
+[2023-02-03 12:45:57.133] [info] Requesting resources for KT AI Accelerator from the server...
+[2023-02-03 12:45:58.151] [info] Initializing the worker daemon for KT AI Accelerator
+[2023-02-03 12:45:59.196] [info] [1/1] Connecting to resources on the server (192.168.110.12:24174)...
+[2023-02-03 12:45:59.208] [info] Establishing links to the resources...
+[2023-02-03 12:45:59.276] [info] KT AI Accelerator is ready to use.
+  0%|                                                                                                                                                         | 0/241 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 54, in wrapper
+    return moreh_function(
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/tensor.py", line 4803, in matmul
+    result = frontend.register_operation([left, right], op)[0]
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/common/frontend.py", line 629, in register_operation
+    return _register_operation_internal(input_tensors, [None] * num_outputs, op)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/common/frontend.py", line 528, in _register_operation_internal
+    raise moreh_exceptions.FallBackException
+moreh.driver.pytorch.torch.common.moreh_exceptions.FallBackException
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "demo.py", line 158, in <module>
+    predictions = make_animation(source_image, driving_video, generator, kp_detector, relative=opt.relative, adapt_movement_scale=opt.adapt_scale, cpu=opt.cpu)
+  File "demo.py", line 76, in make_animation
+    out = generator(source, kp_source=kp_source, kp_driving=kp_norm)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 113, in wrapper
+    raise instance
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 54, in wrapper
+    return moreh_function(
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/nn/parallel/data_parallel.py", line 25, in forward
+    return self.module.forward(*inputs, **kwargs)
+  File "/nas/huong/projects/first-order-model/modules/generator.py", line 68, in forward
+    dense_motion = self.dense_motion_network(source_image=source_image, kp_driving=kp_driving,
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/nas/huong/projects/first-order-model/modules/dense_motion.py", line 89, in forward
+    sparse_motion = self.create_sparse_motions(source_image, kp_driving, kp_source)
+  File "/nas/huong/projects/first-order-model/modules/dense_motion.py", line 59, in create_sparse_motions
+    coordinate_grid = torch.matmul(jacobian, coordinate_grid.unsqueeze(-1))
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 113, in wrapper
+    raise instance
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 54, in wrapper
+    return moreh_function(
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/builtin.py", line 8233, in matmul
+    result = input.matmul(other)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 113, in wrapper
+    raise instance
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 61, in wrapper
+    new_args = tuple(
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 62, in <genexpr>
+    frontend.convert_cuda_tensor_to_cpu_tensor(arg)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/common/frontend.py", line 1790, in convert_cuda_tensor_to_cpu_tensor
+    return argument.cpu()
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 113, in wrapper
+    raise instance
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 54, in wrapper
+    return moreh_function(
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/tensor.py", line 2329, in cpu
+    return self.to('cpu', memory_format=memory_format)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 113, in wrapper
+    raise instance
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/wrapper/moreh_wrapper.py", line 54, in wrapper
+    return moreh_function(
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/tensor.py", line 7635, in to
+    return toop.to_device(self, *organized_args, **organized_kwargs)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/opimpl/toop.py", line 248, in to_device
+    return moreh_sda_to_cpu(tensor)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/opimpl/toop.py", line 50, in moreh_sda_to_cpu
+    return frontend.pull_tensor(moreh_tensor)
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/torch/common/frontend.py", line 1462, in pull_tensor
+    moreh_f.pull_tensor(get_ticket_from_moreh_tensor(tensor),
+  File "/nas/huong/env/fom/lib/python3.8/site-packages/moreh/driver/pytorch/moreh_module/moreh_f.py", line 824, in pull_tensor
+    return _moreh_f.pull_tensor(ticket, host_ptr_v)
+RuntimeError: One or more tensor layouts are too complex to be interpreted in the device (op=moreh.common.Repeat). Please contact technical support for further assistance.
+

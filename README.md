@@ -1,25 +1,33 @@
 # Run with Moreh
 
-Set up
+## Set up
+
+Set up first-order-model
 
     conda create -n fom python=3.8
     update-moreh --force
     pip install -r requirements.txt
 
+Set up face-alignment. Use the same conda env as first-order-model/
+
+    git clone https://github.com/huonglarne/face-alignment
     cd face-alignment
+
     pip install -r requirements.txt
     python setup.py install
     conda install -c conda-forge ffmpeg
 
-Run
+Download pretrained models into `ckpt` folder. Check `download.log` for downloading commands
+
+## Inference
 
   Generate cropped video. Run output of this in terminal.
 
     python crop-video.py --inp some_video.mp4
 
-    python demo.py  --config config/vox-256.yaml --driving_video crop.mp4 --source_image img.jpg --checkpoint ckpt/vox-cpk.pth.tar --relative --adapt_scale
+  Run
 
-    
+    python demo.py  --config config/vox-256.yaml --driving_video crop.mp4 --source_image img.jpg --checkpoint ckpt/vox-cpk.pth.tar
 
 
 <b>!!! Check out our new [paper](https://arxiv.org/pdf/2104.11280.pdf) and [framework](https://github.com/snap-research/articulated-animation) improved for articulated objects</b>

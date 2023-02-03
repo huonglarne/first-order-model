@@ -1,0 +1,50 @@
+
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model$ cd ckpt
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=1pB5zdTqXsklgysZ425IpREQnS3-Jr48q
+
+Downloading...
+From: https://drive.google.com/uc?id=1pB5zdTqXsklgysZ425IpREQnS3-Jr48q
+To: /NAS/huong/projects/first-order-model/ckpt/bair-cpk.pth.tar
+100%|█████████████████████████████████████████████████████| 751M/751M [00:29<00:00, 25.3MB/s]
+
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=1RSekVOZxwAe_G48iEUd4pjg1kzHjnnUC
+Downloading...
+From: https://drive.google.com/uc?id=1RSekVOZxwAe_G48iEUd4pjg1kzHjnnUC
+To: /NAS/huong/projects/first-order-model/ckpt/fashion.pth.tar
+100%|█████████████████████████████████████████████████████| 751M/751M [00:26<00:00, 28.1MB/s]
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=1UT8aBPrjMUPTCmbtDsKk-BCVgIHP5WFc
+
+Downloading...
+From: https://drive.google.com/uc?id=1UT8aBPrjMUPTCmbtDsKk-BCVgIHP5WFc
+To: /NAS/huong/projects/first-order-model/ckpt/mgif-cpk.pth.tar
+100%|█████████████████████████████████████████████████████| 750M/750M [00:23<00:00, 31.5MB/s]
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=1K0qbhdogX9H5CGzX6WLV1c-5gW6yte11
+
+Downloading...
+From: https://drive.google.com/uc?id=1K0qbhdogX9H5CGzX6WLV1c-5gW6yte11
+To: /NAS/huong/projects/first-order-model/ckpt/nemo-cpk.pth.tar
+100%|█████████████████████████████████████████████████████| 751M/751M [00:30<00:00, 24.6MB/s]
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=1K_XBKgQhVY5febYaNjT18GBp9FLWMRbz
+
+Downloading...
+From: https://drive.google.com/uc?id=1K_XBKgQhVY5febYaNjT18GBp9FLWMRbz
+To: /NAS/huong/projects/first-order-model/ckpt/taichi-adv-cpk.pth.tar
+100%|█████████████████████████████████████████████████████| 751M/751M [00:28<00:00, 26.2MB/s]
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=10o7v0UdT4DVLaTIz1n6UojFbaMOGxA_y
+
+Downloading...
+From: https://drive.google.com/uc?id=10o7v0UdT4DVLaTIz1n6UojFbaMOGxA_y
+To: /NAS/huong/projects/first-order-model/ckpt/taichi-cpk.pth.tar
+100%|█████████████████████████████████████████████████████| 751M/751M [00:27<00:00, 27.1MB/s]
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=1L8P-hpBhZi8Q_1vP2KlQ4N6dvlzpYBvZ
+
+Downloading...
+From: https://drive.google.com/uc?id=1L8P-hpBhZi8Q_1vP2KlQ4N6dvlzpYBvZ
+To: /NAS/huong/projects/first-order-model/ckpt/vox-adv-cpk.pth.tar
+100%|█████████████████████████████████████████████████████| 751M/751M [00:29<00:00, 25.9MB/s]
+(/NAS/huong/fom) ubuntu@moreh-test-vm04:/NAS/huong/projects/first-order-model/ckpt$ gdown https://drive.google.com/uc?id=1_v_xW1V52gZCZnXgh1Ap_gwA9YVIzUnS
+
+Downloading...
+From: https://drive.google.com/uc?id=1_v_xW1V52gZCZnXgh1Ap_gwA9YVIzUnS
+To: /NAS/huong/projects/first-order-model/ckpt/vox-cpk.pth.tar
+100%|█████████████████████████████████████████████████████| 729M/729M [00:28<00:00, 25.4MB/s]
